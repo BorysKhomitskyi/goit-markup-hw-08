@@ -1,0 +1,91 @@
+.banner {
+    height: 400px;
+    margin: 0 auto;
+    padding: 118px 0;
+
+    background-color: $banner-bg;
+    background-image: $banner-gradient,
+        url(/images/bannerbgimg-mob.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: $banner-gradient,
+                url(/images/bannerbgimg-mob-2x.jpg);            
+        }
+
+    @media screen and (min-width: 768px) {
+        background-image: $banner-gradient,
+            url(/images/bannerbgimg-tablet.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: $banner-gradient,
+                    url(/images/bannerbgimg-tablet-2x.jpg);
+            }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1600px;
+        height: 600px;
+        padding: 200px 0;
+        background-image: $banner-gradient,
+            url(/images/bannerbgimg.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: $banner-gradient,
+                    url(/images/bannerbgimg-2x.jpg);
+            }
+    }
+}
+
+.banner__title {
+    max-width: 360px;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $main-bg;
+    @media screen and (min-width: 1200px) {
+        max-width: 696px;
+        
+        font-size: 44px;
+        line-height: 1.36;
+    }
+}
+
+.banner__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: $main-bg;
+
+    background: $hover-blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $btn-active;
+    }
+}

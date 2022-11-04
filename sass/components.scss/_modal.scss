@@ -1,0 +1,54 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: block;
+
+    min-width: 450px;
+    min-height: 609px;
+    padding: 40px;
+
+    background-color: $main-bg;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    @media screen and (min-width: 1200px) {
+        min-width: 528px;
+        min-height: 581px;
+    }
+}
+
+.modal__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $main-bg;
+    border: 1px solid $modal-bg;
+    border-radius: 50%;
+    color: var(--logo-black);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: $hover-blue;
+    }
+}
+
+.modal-form__title {
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 12px;
+}

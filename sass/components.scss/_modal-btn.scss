@@ -1,0 +1,23 @@
+.form-modal__btn {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 52px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: $main-bg;
+    background: $hover-blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &focus {
+        background-color: $btn-active;
+    }
+}
