@@ -5,7 +5,7 @@
 
     background-color: $banner-bg;
     background-image: $banner-gradient,
-        url(/images/bannerbgimg-mob.jpg);
+        url(../images/bannerbgimg-mob.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,18 +14,18 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: $banner-gradient,
-                url(/images/bannerbgimg-mob-2x.jpg);            
+                url(../images/bannerbgimg-mob-2x.jpg);            
         }
 
     @media screen and (min-width: 768px) {
         background-image: $banner-gradient,
-            url(/images/bannerbgimg-tablet.jpg);
+            url(../images/bannerbgimg-tablet.jpg);
 
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: $banner-gradient,
-                    url(/images/bannerbgimg-tablet-2x.jpg);
+                    url(../images/bannerbgimg-tablet-2x.jpg);
             }
     }
 
@@ -34,13 +34,13 @@
         height: 600px;
         padding: 200px 0;
         background-image: $banner-gradient,
-            url(/images/bannerbgimg.jpg);
+            url(../images/bannerbgimg.jpg);
 
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: $banner-gradient,
-                    url(/images/bannerbgimg-2x.jpg);
+                    url(../images/bannerbgimg-2x.jpg);
             }
     }
 }
