@@ -53,7 +53,15 @@
 }
 
 .tel {
-    font-size: 34px;
+    font-size: 22px;
+
+    @media screen and (min-width: 480px) {
+        font-size: 34px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        color: $hover-blue;
+    }
 
     @media screen and (min-width: 768px) {
         font-size: 12px;
@@ -76,10 +84,14 @@
 
 .menu-social__links {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 11px;
     line-height: 1.22;    
     letter-spacing: 0.02em;
     color: $hover-blue;
+
+    @media screen and (min-width: 480px) {
+        font-size: 18px;        
+    }
 }
 
 .menu-social__item:not(:last-child) {

@@ -10,7 +10,7 @@
 
 .client-list__link {
     display: flex;
-    width: 210px;
+    width: 130px;
     height: 92px;
     align-items: center;
     justify-content: center;
@@ -27,14 +27,16 @@
         color: $hover-blue;
     }
 
-     @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px) {
+        width: 210px;
+    }
+
+    @media screen and (min-width: 768px) {
         width: 226px;
-        height: 92px;
     }
     
     @media screen and (min-width: 1200px) {
         width: 170px;
-        height: 92px;
     }
 }
 

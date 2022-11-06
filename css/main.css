@@ -139,13 +139,17 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .menu-container.is-open {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 @media screen and (max-width: 767px) {
   .menu-container {
@@ -247,7 +251,17 @@ html {
 }
 
 .tel {
-  font-size: 34px;
+  font-size: 22px;
+}
+@media screen and (min-width: 480px) {
+  .tel {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tel {
+    color: #2196F3;
+  }
 }
 @media screen and (min-width: 768px) {
   .tel {
@@ -275,10 +289,15 @@ html {
 
 .menu-social__links {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 11px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .menu-social__links {
+    font-size: 18px;
+  }
 }
 
 .menu-social__item:not(:last-child) {
@@ -546,13 +565,19 @@ html {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  min-width: 450px;
-  min-height: 609px;
+  min-width: 95%;
+  min-height: 581px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+    min-height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -730,6 +755,11 @@ html {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 479px) {
+  .form-checkbox__icon {
+    padding-right: 10px;
+  }
+}
 
 .form-checkbox__checkbox:checked + .form-checkbox__icon {
   background-image: url("../images/iconcheck.svg");
@@ -745,6 +775,11 @@ html {
   letter-spacing: 0.03em;
   color: #757575;
   cursor: pointer;
+}
+@media screen and (max-width: 479px) {
+  .form-checkbox__text {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form-checkbox__text {
@@ -1203,7 +1238,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 210px;
+  width: 130px;
   height: 92px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1221,16 +1256,19 @@ html {
   border: 1px solid #2196F3;
   color: #2196F3;
 }
+@media screen and (min-width: 480px) {
+  .client-list__link {
+    width: 210px;
+  }
+}
 @media screen and (min-width: 768px) {
   .client-list__link {
     width: 226px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client-list__link {
     width: 170px;
-    height: 92px;
   }
 }
 
@@ -1337,6 +1375,17 @@ html {
   color: #ffffff;
 }
 
+.linebreak {
+  display: none;
+}
+@media screen and (min-width: 473px) and (max-width: 767px) {
+  .linebreak {
+    display: block;
+    width: 100%;
+    height: 0;
+  }
+}
+
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1361,16 +1410,13 @@ html {
 }
 
 .projects-info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tekno {
-    padding: 20px 24px 56px 24px;
-  }
 }
 
 .projects__pic {
@@ -1395,7 +1441,14 @@ html {
 }
 
 .projects__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
